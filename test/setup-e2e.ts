@@ -29,6 +29,7 @@ beforeAll(async () => {
 })
 
 afterAll(async () => {
+  console.log('depois')
   await prisma.$executeRawUnsafe(`DROP SCHEMA IF EXISTS "${schemaId}" CASCADE`)
   await prisma.$disconnect()
 })
